@@ -1,0 +1,9 @@
+#!/usr/bin/csh
+head -3 $1.htm |tail -1 >tmp
+sed -n "s/<TITLE>/head\(\'/p" tmp > tt
+sed -n "s/<\/TITLE>/\'\); ?>/p" tt > tmp
+cat head.php  tmp  > header
+tail +6 $1.htm > $1.tmp
+cat header $1.tmp > $1.php
+rm $1.tmp
+
