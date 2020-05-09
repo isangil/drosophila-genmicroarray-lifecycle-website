@@ -1,0 +1,238 @@
+<html>
+<head>
+<title>Wild Type Time Course Database: Complex Queries</title>
+<meta http-eqip="Content-Type" content=text/html;charset=iso-8859-1">
+<style type="text/css">
+ <!--
+ BODY {font-family : Verdana, Arial, Helvetica;}
+ H1, H2, H3, H4, H5, H6 {font-family : Arial, Helvetica, Verdana, sans-serif;}
+ TD {font-family : Verdana, Arial, Helvetica;}
+ PRE {font-family : Courier Fixed;}
+ .date	{
+		font-size : small;
+		font-family : Verdana;
+		font-style : italic;
+	}  -->
+</style>
+</head>
+<body bgcolor="white">
+<img src="flyarray.jpg" alt="fly array image" width=540 height=108>
+<table width="500" border="0" align="CENTER">
+	<tr><td>&nbsp;
+	<hr align="left" size="1" width="500" noshade>
+	<h2>Wild Type Time Course Database: Complex Queries</h2>
+	<hr align="left" size="1" width="500" noshade>
+	</td></tr>
+</table>
+<form action="http://genome.med.yale.edu/Lifecycle/search_complex_new2.php" 
+method="GET"> <p>
+<strong>   Search based on: </strong>
+<p>
+<table border=0 cellpadding=0 width=70%>
+   <tr valign="center">
+	<td WIDTH="15%">
+		<!select name="field1">
+			<!option value ="rep_average">Log2 Expression level &nbsp;
+		<!/select>
+	</td>
+	<td width="10%">
+		<SELECT NAME="OP1">
+			<OPTION VALUE=eq>=
+			<OPTION VALUE=gt SELECTED>>
+			<OPTION VALUE=gte>>=
+			<OPTION VALUE=lt><
+			<OPTION VALUE=lte><=
+			<OPTION VALUE=neq>not =
+		</SELECT>
+	</td>
+	<td width="10%">
+		<INPUT TYPE=text NAME="input1" VALUE="" SIZE=5><br>
+	</td>
+    </tr>
+    <tr valign="center">
+	<td width="15%">
+		<INPUT TYPE="radio" NAME="Radio" VALUE="and">AND
+		<INPUT TYPE="radio" NAME="Radio" VALUE="or">OR	<br>
+        </td>
+	<td width="10%">
+		&nbsp;
+        </td>
+	<td width="10%">
+		&nbsp;
+        </td>
+    </tr>
+    <tr valign="center">
+	<td width="15%">
+		Log2 Expression level &nbsp;
+	</td>
+	<td width="10%">
+		<SELECT NAME="OP2">
+			<OPTION VALUE=eq>=
+			<OPTION VALUE=gt SELECTED>>
+			<OPTION VALUE=gte>>=
+			<OPTION VALUE=lt><
+			<OPTION VALUE=lte><=
+			<OPTION VALUE=neq>not =
+		</SELECT>
+	</td>
+	<td width="10%">
+		<INPUT TYPE=text NAME="input2" VALUE="" SIZE=5>	<br>
+	</td>
+    </tr>
+</table>
+<p>
+<table border=0 cellpadding=0 width=70%>
+   <tr valign="center">
+	<td width=5%>
+	    <select name="and0r7">
+		<option value =AND>And
+		<option value=OR>Or
+		<option value =NOT>Not
+		<option value =NONE>-
+	    </select>
+	<td width=20%>
+		Stage: 
+	</td>
+	<td width=20%>
+	    <select name="stage[]" MULTIPLE SIZE=5>
+		<option value ="embryo">Embryo
+		<option value ="larvae">Larvae
+		<option value ="prepupae">Prepupae
+		<option value ="pupae">Pupae
+		<option value ="adult">Adult
+	    </select><br>
+	</td>
+	<td width=25%>	</td>
+  </tr>
+  <tr>
+	<td width=5%>
+	    <select name="and0r9">
+		<option value =AND>And
+		<option value=OR>Or
+		<option value =NOT>Not
+	    </select>
+	</td>
+	<td width=20%>
+	     	Select based on sex
+	</td>
+	<td width=20%>
+		<font size=-1 color=purple>(leave blank to query regardless of sex)</font>
+	</td>
+	<td width=25%>
+	    <INPUT TYPE="radio" NAME="sex" VALUE="MALE">Males
+            <INPUT TYPE="radio" NAME="sex" VALUE="FEMALE">Females
+            <INPUT TYPE="radio" NAME="sex" VALUE="BOTH">Mixed Samples
+	</td>
+  </tr>
+  <tr>
+	<td width=5%>
+	    <select name="and0r10">
+		<option value =AND>And
+		<option value=OR>Or
+	    </select>
+	</td>
+	<td width=20%>
+		Search according to:
+        </td>
+	<td width=20%>
+	    <INPUT TYPE="radio" NAME="description" VALUE="tudor">Tudor
+            <INPUT TYPE="radio" NAME="description" VALUE="CS wild type">Wild type
+	</td>
+	<td width=25%>
+            <INPUT TYPE="radio" NAME="description" VALUE="CS unfertilized">Unfertilized
+            <INPUT TYPE="radio" NAME="description" VALUE="Eyes absent">Eyes absent
+	</td>
+  </tr>
+  <tr valign="center">
+	<td width=5%>
+	    <select name="and0r8">
+		<option value =AND>And
+		<option value=OR>Or
+		<option value =NOT>Not
+	    </select>
+	<td width=20%>
+		Function: 
+	</td>
+	<td width=20%>
+	    <select name="function">
+		<option value="">--Select one--</option>
+		<option value="DNA binding">DNA binding</option>
+		<option value="DNA-directed_RNA_pol">DNA-directed RNA_pol</option>
+		<option value="DNA_repair_protein">DNA repair protein</option>
+		<option value="DNA_replication_fact">DNA replication factor</option>
+		<option value="GTP_binding">GTP binding</option>
+		<option value="G_protein_linked_rec">G_protein linked_rec</option>
+		<option value="RNA binding">RNA binding</option>
+		<option value="RNA-directed_DNA_">RNA-directed DNA</option>
+		<option value="Sodium/calcium excha">Sodium/calcium excha</option>
+		<option value="acid_phosphatase">acid phosphatase</option>
+		<option value="actin_binding">actin binding</option>
+		<option value="acyl-CoA_dehydrogena">acyl-CoA_dehydrogena</option>
+		<option value="adenylate_kinase">adenylate kinase</option>
+		<option value="apoptosis_inhibitor">apoptosis inhibitor</option>
+		<option value="calcium_binding">calcium binding</option>
+		<option value="calpain">calpain</option>
+		<option value="cell adhesion">cell adhesion</option>
+		<option value="cell_cycle">cell cycle</option>
+		<option value="cell_cycle_regulator">cell cycle regulator</option>
+		<option value="chaperone">chaperone</option>
+		<option value="chitinase">chitinase</option>
+		<option value="chromatin_binding">chromatin binding</option>
+		<option value="cyclin-dependent_pro">cyclin-dependent_pro</option>
+		<option value="cytochrome_P450">cytochrome P450</option>
+		<option value="cytoskeletal_structu">cytoskeletal structure</option>
+		<option value="defense/immunity_pro">defense/immunity_pro</option>
+		<option value="electron_transfer">electron transfer</option>
+		<option value="endopeptidase">endopeptidase</option>
+		<option value="enzyme">enzyme</option>
+		<option value="enzyme_activator">enzyme activator</option>
+		<option value="enzyme_inhibitor">enzyme inhibitor</option>
+		<option value="glutathione_transfer">glutathione transfer</option>
+		<option value="glycerol_kinase">glycerol kinase</option>
+		<option value="ion_channel">ion channel</option>
+		<option value="larval_serum_protein">larval serum protein</option>
+		<option value="ligand_binding_or_ca">ligand binding or ca</option>
+		<option value="metabolism">metabolism</option>
+		<option value="metalloendopeptidase">metalloendopeptidase</option>
+		<option value="motor_protein">motor protein</option>
+		<option value="neuropeptide_hormone">neuropeptide hormone</option>
+		<option value="neurotransmitter_tra">neurotransmitter tra</option>
+		<option value="nucleic_acid_binding">nucleic acid binding</option>
+		<option value="peptidase">peptidase</option>
+		<option value="peroxidase">peroxidase</option>
+		<option value="photoreceptor">photoreceptor</option>
+		<option value="protein_kinase">protein kinase</option>
+		<option value="protein_phosphatase">protein phosphatase</option>
+		<option value="protein_tyrosine_pho">protein tyrosine pho</option>
+		<option value="receptor">receptor</option>
+		<option value="ribosomal_ protein">ribosomal protein</option>
+		<option value="ribosomal_protein">ribosomal protein</option>
+		<option value="selectin">selectin</option>
+		<option value="serpin">serpin</option>
+		<option value="signal_transduction">signal transduction</option>
+		<option value="steroid hormone rece">steroid hormone rece</option>
+		<option value="storage_protein">storage protein</option>
+		<option value="structural_protein">structural protein</option>
+		<option value="synaptosome-associat">synaptosome-associat</option>
+		<option value="transcription_factor">transcription factor</option>
+		<option value="translation_factor">translation factor</option>
+		<option value="transmembrane_recept">transmembrane receptor</option>
+		<option value="transporter">transporter</option>
+		<option value="tumor_suppressor">tumor suppressor</option>
+		<option value="ubiquitin">ubiquitin</option>
+		<option value="ubiquitin-protein_li">ubiquitin-protein_li</option>
+		<option value="unknown">unknown</option>
+	    </select><br>
+	</td>
+	<td width=25%>	</td>
+  </tr>
+</table>
+
+<center>
+<input type="submit" value="Search"><br>
+<INPUT TYPE="reset">
+</center>
+</form>
+
+</body>
+</html>

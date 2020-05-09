@@ -1,0 +1,56 @@
+<?php
+function head($title){
+?>
+<html>
+<head>
+<title><?php echo $title ?></title>
+<meta http-eqip="Content-Type" content=text/html;charset=iso-8859-1">
+<style type="text/css">
+ <!--
+ BODY {font-family : Verdana, Arial, Helvetica;}
+ H1, H2, H3, H4, H5, H6 {font-family : Arial, Helvetica, Verdana, sans-serif;}
+ TD {font-family : Verdana, Arial, Helvetica;}
+ PRE {font-family : Courier Fixed;}
+ .date	{
+		font-size : small;
+		font-family : Verdana;
+		font-style : italic;
+	}
+  -->
+</style>
+</head>
+<body bgcolor="white">
+<img src="flyarray.jpg" alt="fly array image" width=540 height=108>
+<table width="500" border="0" align="CENTER">
+	<tr><td>&nbsp;
+	<hr align="left" size="1" width="500" noshade>
+	<h2>Wild Type Time Course Database: Single Gene Queries</h2>
+	<hr align="left" size="1" width="500" noshade>
+	</td></tr>
+</table>
+<?php
+}
+head("single gene timecourse evolution query");
+?> 
+<form action="http://genome.med.yale.edu/Lifecycle/query_gen.php" method="GET">
+ 
+<table width="600" border="0" align="CENTER">
+   <tr>
+     <td>
+     Enter gene symbol (<font color="purple">i.e, <i>dos</i></font>). You can also enter a CG (<font color="purple">I.e.; <i>CG15848</i></font>) or an Fbgn (<font color="purple">I.e.; <i>FBgn0035893</i></font>)
+     <INPUT TYPE=text NAME="input1" VALUE="" SIZE=15><br>
+     </td>
+   </tr>
+   <tr>
+     <td>
+	<input type="submit" value="Search"><br>
+	<INPUT TYPE="reset">
+     </td>
+   </tr>
+</table>
+
+
+</form>
+
+</body>
+</html>

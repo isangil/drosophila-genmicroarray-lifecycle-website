@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Wild Type Time Course Database: Complex Queries</title>
+<meta http-eqip="Content-Type" content=text/html;charset=iso-8859-1">
+<style type="text/css">
+ <!--
+ BODY {font-family : Verdana, Arial, Helvetica;}
+ H1, H2, H3, H4, H5, H6 {font-family : Arial, Helvetica, Verdana, sans-serif;}
+ TD {font-family : Verdana, Arial, Helvetica;}
+ PRE {font-family : Courier Fixed;}
+ .date	{
+		font-size : small;
+		font-family : Verdana;
+		font-style : italic;
+	}
+  -->
+</style>
+</head>
+<body bgcolor="white">
+<img src="flyarray.jpg" alt="fly array image" width=540 height=108>
+<table width="500" border="0" align="CENTER">
+	<tr><td>&nbsp;
+	<hr align="left" size="1" width="500" noshade>
+	<h2>Wild Type Time Course Database: Complex Queries</h2>
+	<hr align="left" size="1" width="500" noshade>
+	</td></tr>
+</table>
+<form action="http://genome.med.yale.edu/Lifecycle/search_complex_new.php" method="GET">
+<p>
+<strong>   Search based on: </strong>
+<p>
+<table border=0 cellpadding=0 width=70%>
+   <tr valign="center">
+	<td WIDTH="15%">
+		<!select name="field1">
+			<!option value ="rep_average">Log2 Expression level &nbsp;
+		<!/select>
+	</td>
+	<td width="10%">
+		<SELECT NAME="OP1">
+			<OPTION VALUE=eq>=
+			<OPTION VALUE=gt SELECTED>>
+			<OPTION VALUE=gte>>=
+			<OPTION VALUE=lt><
+			<OPTION VALUE=lte><=
+			<OPTION VALUE=neq>not =
+		</SELECT>
+	</td>
+	<td width="10%">
+		<INPUT TYPE=text NAME="input1" VALUE="" SIZE=5><br>
+	</td>
+    </tr>
+    <tr valign="center">
+	<td width="15%">
+		<INPUT TYPE="radio" NAME="Radio" VALUE="and">AND
+		<INPUT TYPE="radio" NAME="Radio" VALUE="or">OR	<br>
+        </td>
+	<td width="10%">
+		&nbsp;
+        </td>
+	<td width="10%">
+		&nbsp;
+        </td>
+    </tr>
+    <tr valign="center">
+	<td width="15%">
+		Log2 Expression level &nbsp;
+	</td>
+	<td width="10%">
+		<SELECT NAME="OP2">
+			<OPTION VALUE=eq>=
+			<OPTION VALUE=gt SELECTED>>
+			<OPTION VALUE=gte>>=
+			<OPTION VALUE=lt><
+			<OPTION VALUE=lte><=
+			<OPTION VALUE=neq>not =
+		</SELECT>
+	</td>
+	<td width="10%">
+		<INPUT TYPE=text NAME="input2" VALUE="" SIZE=5>	<br>
+	</td>
+    </tr>
+</table>
+<p>
+<table border=0 cellpadding=0 width=70%>
+   <tr valign="center">
+	<td width=5%>
+	    <select name="and0r7">
+		<option value =NONE>-
+		<option value =AND>And
+		<option value=OR>Or
+		<option value =NOT>Not
+	    </select>
+	<td width=20%>
+		Stage: 
+	</td>
+	<td width=20%>
+	    <select name="stage[]" MULTIPLE SIZE=5>
+		<option value ="embryo">Embryo
+		<option value ="larvae">Larvae
+		<option value ="prepupae">Prepupae
+		<option value ="pupae">Pupae
+		<option value ="adult">Adult
+	    </select><br>
+	</td>
+	<td width=25%>	</td>
+  </tr>
+  <tr>
+	<td width=5%>
+	    <select name="and0r9">
+		<option value =AND>And
+		<option value=OR>Or
+		<option value =NOT>Not
+	    </select>
+	</td>
+	<td width=20%>
+	     	Select based on sex
+	</td>
+	<td width=20%>
+		<font size=-1 color=purple>(leave blank to query regardless of sex)</font>
+	</td>
+	<td width=25%>
+	    <INPUT TYPE="radio" NAME="sex" VALUE="MALE">Males
+            <INPUT TYPE="radio" NAME="sex" VALUE="FEMALE">Females
+            <INPUT TYPE="radio" NAME="sex" VALUE="BOTH">Mixed Samples
+	</td>
+  </tr>
+  <tr>
+	<td width=5%>
+	    <select name="and0r10">
+		<option value =AND>And
+		<option value=OR>Or
+	    </select>
+	</td>
+	<td width=20%>
+		Search according to:
+        </td>
+	<td width=20%>
+	    <INPUT TYPE="radio" NAME="description" VALUE="tudor">Tudor
+            <INPUT TYPE="radio" NAME="description" VALUE="CS wild type">Wild type
+	</td>
+	<td width=25%>
+            <INPUT TYPE="radio" NAME="description" VALUE="CS unfertilized">Unfertilized
+            <INPUT TYPE="radio" NAME="description" VALUE="Eyes absent">Eyes absent
+	</td>
+  </tr>
+</table>
+
+<center>
+<input type="submit" value="Search"><br>
+<INPUT TYPE="reset">
+</center>
+</form>
+
+</body>
+</html>
