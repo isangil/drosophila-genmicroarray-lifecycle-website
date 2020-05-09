@@ -1,1 +1,3 @@
 # drosophila-genmicroarray-lifecycle-website
+I am including here the files that powered the website we created about 20 years ago (2003) to offer a massive amount of gene expression data for the Drosophila Melanogaster lifecycle.  This study, published by Kevin White in 2002 in the Science mag (Sep-2002), covers the genome wide expression for 72 points in the life of the fruitfly, from larvae to adult stages.
+This was done when Nirvana was still a thing, for today's standards, this is dated technology, but back when, it allowed researchers over the world to see how their favorite genes may be co-expressed in different stages of the fruitfly.
